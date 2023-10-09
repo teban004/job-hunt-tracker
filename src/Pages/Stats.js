@@ -1,7 +1,7 @@
 function Stats() {
   
     return (
-      <div className="about">
+      <div className="stats">
         This is where the stats will be
       </div>
     );

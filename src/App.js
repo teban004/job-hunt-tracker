@@ -1,27 +1,16 @@
-import './App.css';
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Menu from './Menu';
-import About from './Pages/About';
-import Home from './Pages/Home';
-import Create from './Pages/Create';
-import Contact from './Pages/Contact';
-import Stats from './Pages/Stats';
+import { BrowserRouter as Router } from 'react-router-dom';
+import './App.css';
+import Sidebar from './Components/Sidebar';
+import MainContent from './Components/MainContent';
 
 function App() {
   return (
     <Router>
-        <div className="App">
-            <Menu />
-            <Routes>
-                <Route path="/" element={<About />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/home" element={<Home />} />
-                <Route path="/create" element={<Create />} />
-                <Route path="/stats" element={<Stats />} />
-            </Routes>
-        </div>
+      <div className="App">
+        <Sidebar />
+        <MainContent />
+      </div>
     </Router>
   );
 }
