@@ -44,51 +44,53 @@ const Table = ({ data, columns, defaultPageSize }) => {
 
   return (
     <div>
-      <table className="table">
-        <thead>
-          <tr>
-            {columns.map((column) => (
-              <th key={column.field} onClick={() => handleSort(column.field)}>
-                {column.label}
-              </th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          {paginatedData.map((item, index) => (
-            <tr
-              key={index}
-              className={index % 2 === 0 ? 'even-row' : 'odd-row'}
+        <div className="table-container">
+            <table className="table">
+                <thead>
+                <tr>
+                    {columns.map((column) => (
+                    <th key={column.field} onClick={() => handleSort(column.field)}>
+                        {column.label}
+                    </th>
+                    ))}
+                </tr>
+                </thead>
+                <tbody>
+                {paginatedData.map((item, index) => (
+                    <tr
+                    key={index}
+                    className={index % 2 === 0 ? 'even-row' : 'odd-row'}
+                    >
+                    {columns.map((column) => (
+                        <td key={column.field}>{item[column.field]}</td>
+                    ))}
+                    </tr>
+                ))}
+                </tbody>
+            </table>
+        </div>
+        <div className="pagination">
+            <button
+            onClick={() => handlePageChange(currentPage - 1)}
+            disabled={currentPage === 0}
             >
-              {columns.map((column) => (
-                <td key={column.field}>{item[column.field]}</td>
-              ))}
-            </tr>
-          ))}
-        </tbody>
-      </table>
-      <div className="pagination">
-        <button
-          onClick={() => handlePageChange(currentPage - 1)}
-          disabled={currentPage === 0}
-        >
-          Previous
-        </button>
-        <span>
-          Page {currentPage + 1} of {Math.ceil(sortedData.length / pageSize)}
-        </span>
-        <button
-          onClick={() => handlePageChange(currentPage + 1)}
-          disabled={currentPage === Math.ceil(sortedData.length / pageSize) - 1}
-        >
-          Next
-        </button>
-        <select onChange={handlePageSizeChange} value={pageSize}>
-          <option value={2}>2 per page</option>
-          <option value={10}>10 per page</option>
-          <option value={20}>20 per page</option>
-        </select>
-      </div>
+            Previous
+            </button>
+            <span>
+            Page {currentPage + 1} of {Math.ceil(sortedData.length / pageSize)}
+            </span>
+            <button
+            onClick={() => handlePageChange(currentPage + 1)}
+            disabled={currentPage === Math.ceil(sortedData.length / pageSize) - 1}
+            >
+            Next
+            </button>
+            <select onChange={handlePageSizeChange} value={pageSize}>
+            <option value={2}>2 per page</option>
+            <option value={10}>10 per page</option>
+            <option value={20}>20 per page</option>
+            </select>
+        </div>
     </div>
   );
 };

@@ -1,40 +1,44 @@
-/* Apply a basic styling to your table */
+/* Apply a basic styling to the table */
+.table-container {
+    background: linear-gradient(-68deg,#c0bed1,#a6dada);
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
     font-size: 16px;
     text-align: left;
-    background-color: #fff;
+    background-color: transparent;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Style the table header */
-  thead th {
+}
+
+/* Style the table header */
+thead th {
     background-color: #3498db;
     color: #fff;
     font-weight: bold;
     padding: 10px;
     text-transform: uppercase;
-  }
+}
   
-  /* Style table rows */
-  tbody tr:nth-child(even) {
-    background-color: #eaeaf3;
-  }
+/* Style table rows */
+tbody tr:nth-child(even) {
+    background-color: transparent;
+}
   
-  tbody tr:hover {
-    background-color: #d9e4e7; /* Light gray on hover */
-  }
+tbody tr:hover {
+    background-color: #d9e4e773; /* Light gray on hover */
+}
   
-  /* Style table cells (td) */
-  td {
+/* Style table cells (td) */
+td {
     padding: 10px;
     border-bottom: 1px solid #ddd;
-  }
+}
   
-  /* Make the table responsive on small screens */
-  @media (max-width: 600px) {
+/* Make the table responsive on small screens */
+@media (max-width: 600px) {
     table {
       border: 0;
     }
@@ -52,16 +56,16 @@ table {
       align-items: center;
       border: 1px solid #ccc;
     }
-  }
+}
   
-  /* Style pagination if you have one */
-  .pagination {
+/* Style pagination if you have one */
+.pagination {
     margin: 20px 0;
     display: flex;
     justify-content: center;
-  }
+}
   
-  .pagination button {
+.pagination button {
     background-color: #3498db;
     color: #fff;
     border: none;
@@ -70,9 +74,9 @@ table {
     cursor: pointer;
     border-radius: 4px;
     transition: background-color 0.3s;
-  }
+}
   
-  .pagination button:hover {
+.pagination button:hover {
     background-color: #2980b9;
-  }
+}
   
