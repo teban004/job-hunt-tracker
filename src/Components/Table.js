@@ -43,7 +43,7 @@ const Table = ({ data, columns, defaultPageSize }) => {
 
   return (
     <div>
-      <table>
+      <table className="table">
         <thead>
           <tr>
             {columns.map((column) => (
