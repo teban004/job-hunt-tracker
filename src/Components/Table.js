@@ -1,5 +1,6 @@
 // Table.js
 import React, { useState, useEffect } from 'react';
+import '../Styles/tableStyles.css';
 
 const Table = ({ data, columns, defaultPageSize }) => {
   const [currentPage, setCurrentPage] = useState(0);
