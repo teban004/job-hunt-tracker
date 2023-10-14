@@ -1,8 +1,11 @@
+import JobForm from '../Components/JobForm'
+
 function Create() {
   
     return (
       <div className="create">
-        This is the create page
+        Please fill the following form to create a job posting:
+        <JobForm />
       </div>
     );
   }
