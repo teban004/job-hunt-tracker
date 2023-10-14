@@ -1,37 +1,10 @@
 /* App.css */
 .App {
-  display: flex;
+  
 }
 
-.sidebar {
-  width: 250px;
-  height: 100vh;
-  background-color: #bebebe;
-  color: rgb(3, 2, 54);
-  overflow-x: hidden;
-  transition: 0.3s;
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.sidebar.open {
-  width: 40px;
-}
-
-.sidebar-toggle {
-  font-size: 24px;
-  cursor: pointer;
-  padding: 10px;
-}
-
-.sidebar ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.sidebar ul li {
-  padding: 10px;
-}
-
-.main-content {
-  flex-grow: 1;
-  padding: 20px;
-}
