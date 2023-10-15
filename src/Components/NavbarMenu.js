@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { FiMenu, FiX } from "react-icons/fi"; // You can choose different icons
+import { FiMenu, FiX } from "react-icons/fi";
 import "../Styles/NavbarMenu.css";
 
 const NavbarMenu = () => {
@@ -8,22 +8,29 @@ const NavbarMenu = () => {
 
   const toggleNavbarMenu = () => {
     setIsOpen(!isOpen);
-    console.log(isOpen);
-    var x = document.getElementById("topnavMenu");
-    if (x.className === "topnav") {
-      x.className += " responsive";
-    } else {
-      x.className = "topnav";
+  };
+
+  const closeNavbarMenu = () => {
+    if (isOpen) {
+      setIsOpen(false);
     }
   };
 
   return (
-    <div className="topnav" id="topnavMenu">
+    <div className={isOpen ? "topnav responsive" : "topnav"} id="topnavMenu">
       <a className="active">Menu</a>
-      <Link to="/about">Info</Link>
-      <Link to="/contact">Contact</Link>
-      <Link to="/create">Create</Link>
-      <Link to="/home">View</Link>
+      <Link to="/about" onClick={closeNavbarMenu}>
+        Info
+      </Link>
+      <Link to="/contact" onClick={closeNavbarMenu}>
+        Contact
+      </Link>
+      <Link to="/create" onClick={closeNavbarMenu}>
+        Create
+      </Link>
+      <Link to="/home" onClick={closeNavbarMenu}>
+        View
+      </Link>
       <a className="icon" onClick={toggleNavbarMenu}>
         {isOpen ? <FiX /> : <FiMenu />}
       </a>
