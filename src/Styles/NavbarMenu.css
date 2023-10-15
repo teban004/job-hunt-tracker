@@ -3,7 +3,7 @@
 /* topnav container */
  .topnav {
   overflow: hidden;
-  background-color: #333;
+  background: linear-gradient(90deg,#1d071f,#580e42);;
   font-family: Arial;
 }
 

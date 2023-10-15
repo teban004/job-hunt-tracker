@@ -1,6 +1,6 @@
 /* Apply a basic styling to the table */
 .table-container {
-    background: linear-gradient(-68deg,#c0bed1,#a6dada);
+    background: linear-gradient(45deg,#aaa8be,#a6dada);
 }
 
 table {
