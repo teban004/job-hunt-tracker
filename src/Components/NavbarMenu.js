@@ -18,7 +18,7 @@ const NavbarMenu = () => {
 
   return (
     <div className={isOpen ? "topnav responsive" : "topnav"} id="topnavMenu">
-      <a className="active">Menu</a>
+      <a className="active">JHT</a>
       <Link to="/about" onClick={closeNavbarMenu}>
         Info
       </Link>

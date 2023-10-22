@@ -9,3 +9,68 @@ body {
   background-color: #efefef;
 }
 
+
+
+
+
+/* Reset default margin and padding */
+body, h1, h2, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Basic styling */
+header {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 24px;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+}
+
+main {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.about h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.about p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.about ul {
+  margin-left: 20px;
+}
+
+footer {
+  background: linear-gradient(90deg,#1d071f,#580e42);
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}

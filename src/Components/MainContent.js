@@ -8,7 +8,8 @@ import Stats from '../Pages/Stats';
 
 const MainContent = () => {
   return (
-    <div className="main-content">
+    <>
+    <main>
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -17,8 +18,12 @@ const MainContent = () => {
         <Route path="/create" element={<Create />} />
         <Route path="/stats" element={<Stats />} />
       </Routes>
-    </div>
-  );
+    </main>
+    <footer>
+        <p>&copy; 2023 Job Hunt Tracker</p>
+    </footer>
+</>
+);
 };
 
 export default MainContent;
