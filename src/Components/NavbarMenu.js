@@ -17,23 +17,25 @@ const NavbarMenu = () => {
   };
 
   return (
-    <div className={isOpen ? "topnav responsive" : "topnav"} id="topnavMenu">
-      <a className="active">JHT</a>
-      <Link to="/about" onClick={closeNavbarMenu}>
-        Info
-      </Link>
-      <Link to="/contact" onClick={closeNavbarMenu}>
-        Contact
-      </Link>
-      <Link to="/create" onClick={closeNavbarMenu}>
-        Create
-      </Link>
-      <Link to="/home" onClick={closeNavbarMenu}>
-        View
-      </Link>
-      <a className="icon" onClick={toggleNavbarMenu}>
-        {isOpen ? <FiX /> : <FiMenu />}
-      </a>
+    <div className="navbar-container">
+      <div className={isOpen ? "topnav responsive" : "topnav"} id="topnavMenu">
+        <a className="active">JHT</a>
+        <Link to="/about" onClick={closeNavbarMenu}>
+          Info
+        </Link>
+        <Link to="/contact" onClick={closeNavbarMenu}>
+          Contact
+        </Link>
+        <Link to="/create" onClick={closeNavbarMenu}>
+          Create
+        </Link>
+        <Link to="/home" onClick={closeNavbarMenu}>
+          View
+        </Link>
+        <a className="icon" onClick={toggleNavbarMenu}>
+          {isOpen ? <FiX /> : <FiMenu />}
+        </a>
+      </div>
     </div>
   );
 };

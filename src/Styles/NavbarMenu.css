@@ -1,9 +1,18 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
 
-/* topnav container */
- .topnav {
+/* Container for the navigation bar */
+.navbar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(90deg, #1d071f, #580e42);
+  z-index: 1000; /* Adjust this value as needed to ensure it's above other page elements */
+}
+
+/* Style for the navigation bar */
+.topnav {
   overflow: hidden;
-  background: linear-gradient(90deg,#1d071f,#580e42);
   font-family: Arial;
 }
 
