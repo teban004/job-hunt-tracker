@@ -6,7 +6,7 @@ import MainContent from "./Components/MainContent";
 
 function App() {
     return (
-        <Router>
+        <Router basename="/job-hunt-tracker">
             <div className="App">
                 <div>
                     <NavbarMenu />
