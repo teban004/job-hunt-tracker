@@ -3,9 +3,12 @@ import { Link } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
 import "../Styles/NavbarMenu.css";
 import LoginButton from "./login"
+import LogoutButton from "./logout"
+import { useAuth0 } from "@auth0/auth0-react";
 
 const NavbarMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { user, isAuthenticated, isLoading } = useAuth0();
 
   const toggleNavbarMenu = () => {
     setIsOpen(!isOpen);
@@ -36,7 +39,14 @@ const NavbarMenu = () => {
         <a className="icon" onClick={toggleNavbarMenu}>
           {isOpen ? <FiX /> : <FiMenu />}
         </a>
-        <LoginButton></LoginButton>
+        {isAuthenticated && (
+          <div>
+            <span>{user.name}</span>
+            <span>{user.email}</span>
+            <LogoutButton />
+          </div>
+        )}
+        {!isAuthenticated && (<LoginButton />)}
       </div>
     </div>
   );
