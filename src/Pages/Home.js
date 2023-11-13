@@ -1,4 +1,5 @@
 import Table from '../Components/Table';
+import Profile from '../Components/profile';
 
 function Home() {
 
@@ -56,6 +57,7 @@ function Home() {
   
     return (
       <div className="home">
+        <Profile />
         <h1>Latest applications</h1>
         <Table data={data} columns={columns} defaultPageSize={10} />
       </div>
