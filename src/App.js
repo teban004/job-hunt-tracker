@@ -3,19 +3,28 @@ import { BrowserRouter as Router } from "react-router-dom";
 import "./App.css";
 import NavbarMenu from "./Components/NavbarMenu";
 import MainContent from "./Components/MainContent";
+import { Auth0Provider } from '@auth0/auth0-react';
 
 function App() {
     return (
-        <Router basename="/job-hunt-tracker">
-            <div className="App">
-                <div>
-                    <NavbarMenu />
+        <Auth0Provider
+            domain="dev-szzarm85ogqj8spk.us.auth0.com"
+            clientId="a0VrBxIJmSHUcreTLRYs4FESLHYQTfIR"
+            authorizationParams={{
+            redirect_uri: window.location.origin
+            }}
+        >
+            <Router basename="/job-hunt-tracker">
+                <div className="App">
+                    <div>
+                        <NavbarMenu />
+                    </div>
+                    <div className="content-container">
+                        <MainContent />
+                    </div>
                 </div>
-                <div className="content-container">
-                    <MainContent />
-                </div>
-            </div>
-        </Router>
+            </Router>
+        </Auth0Provider>
   );
 }
 

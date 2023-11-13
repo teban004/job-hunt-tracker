@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
 import "../Styles/NavbarMenu.css";
+import LoginButton from "./login"
 
 const NavbarMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,6 +36,7 @@ const NavbarMenu = () => {
         <a className="icon" onClick={toggleNavbarMenu}>
           {isOpen ? <FiX /> : <FiMenu />}
         </a>
+        <LoginButton></LoginButton>
       </div>
     </div>
   );
