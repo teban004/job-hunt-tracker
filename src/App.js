@@ -11,7 +11,7 @@ function App() {
             domain="dev-szzarm85ogqj8spk.us.auth0.com"
             clientId="a0VrBxIJmSHUcreTLRYs4FESLHYQTfIR"
             authorizationParams={{
-            redirect_uri: window.location.origin
+            redirect_uri: "http://localhost:3000/job-hunt-tracker"
             }}
         >
             <Router basename="/job-hunt-tracker">

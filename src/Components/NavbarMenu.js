@@ -43,9 +43,9 @@ const NavbarMenu = () => {
           <div>
             <span>{user.name}</span>
             <span>{user.email}</span>
-            <LogoutButton />
           </div>
         )}
+            <LogoutButton />
         {!isAuthenticated && (<LoginButton />)}
       </div>
     </div>
